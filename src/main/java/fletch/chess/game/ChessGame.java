@@ -1,5 +1,10 @@
 package fletch.chess.game;
 
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class ChessGame {
 
@@ -8,36 +13,24 @@ public class ChessGame {
     public static void main(String... args){
         ChessGame game = new ChessGame();
         game.myState = "dslkjdsfljk";
+        //1. Create the frame.
+        JFrame frame = new JFrame("chessGame");
 
-        ChessGame game2 = new ChessGame();
-        game2.myState = "something";
+        frame.setPreferredSize(new Dimension(800, 800));
 
-        ChessGame game3 = new ChessGame();
-        game3.myState = "somethingElse";
+        //2. Optional: What happens when the frame closes?
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        game.doBobStuff();
-        game2.doBobStuff();
-        game3.doBobStuff();
+        //3. Create components and put them in the frame.
+        //...create emptyLabel...
+        JLabel label = new JLabel();
+        frame.getContentPane().add(label, BorderLayout.CENTER);
+        label.setText("UnicornWar");
 
+        //4. Size the frame.
+        frame.pack();
 
-
-        game.doBobStufff("dsflkjfsd");
-        game.doBobStuff();
-    }
-
-    private void doBobStufff(String bob){
-
-    }
-
-    private void doBobStuff(){
-        System.out.println(myState);
-    }
-
-    private  String bob(){
-         return "Bob";
-    }
-
-    private  void bob2(){
-
+        //5. Show it.
+        frame.setVisible(true);
     }
 }
