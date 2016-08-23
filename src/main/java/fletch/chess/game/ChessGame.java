@@ -1,10 +1,10 @@
 package fletch.chess.game;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-
+import java.awt.*;
 import javax.swing.JFrame;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+
 
 public class ChessGame {
 
@@ -23,7 +23,8 @@ public class ChessGame {
 
         //3. Create components and put them in the frame.
         //...create emptyLabel...
-        JLabel label = new JLabel();
+        ImageIcon icon = new ImageIcon("Rochefoucauld-Grail-Gawain-in-battle.jpg");
+        JLabel label = new JLabel(icon);
         frame.getContentPane().add(label, BorderLayout.CENTER);
         label.setText("UnicornWar");
 
@@ -32,5 +33,8 @@ public class ChessGame {
 
         //5. Show it.
         frame.setVisible(true);
+
+
     }
 }
+
