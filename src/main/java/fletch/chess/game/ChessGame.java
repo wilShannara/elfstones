@@ -1,9 +1,9 @@
 package fletch.chess.game;
 
+import java.awt.FlowLayout;
+
 import java.awt.*;
-import javax.swing.JFrame;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
+import javax.swing.*;
 
 
 public class ChessGame {
@@ -25,16 +25,14 @@ public class ChessGame {
         //...create emptyLabel...
         ImageIcon icon = new ImageIcon("Rochefoucauld-Grail-Gawain-in-battle.jpg");
         JLabel label = new JLabel(icon);
+        label.setText("<html><h1>UnicornWar</h1></html>");
         frame.getContentPane().add(label, BorderLayout.CENTER);
-        label.setText("UnicornWar");
 
         //4. Size the frame.
         frame.pack();
 
         //5. Show it.
         frame.setVisible(true);
-
-
     }
 }
 
