@@ -1,7 +1,5 @@
 package fletch.chess.game;
 
-import java.awt.FlowLayout;
-
 import java.awt.*;
 import javax.swing.*;
 
@@ -24,8 +22,9 @@ public class ChessGame {
         //3. Create components and put them in the frame.
         //...create emptyLabel...
         ImageIcon icon = new ImageIcon("Rochefoucauld-Grail-Gawain-in-battle.jpg");
-        JLabel label = new JLabel(icon);
-        label.setText("<html><h1>UnicornWar</h1></html>");
+        JLabel label = new JLabel("<html><h1>UnicornWar</h1></html>", icon, JLabel.CENTER);
+        label.setVerticalTextPosition(JLabel.TOP);
+        label.setHorizontalTextPosition(JLabel.CENTER);
         frame.getContentPane().add(label, BorderLayout.CENTER);
 
         //4. Size the frame.
